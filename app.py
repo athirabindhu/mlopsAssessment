@@ -13,10 +13,13 @@ def welcome():
 # GET REQUEST
 @app.route('/predict')
 def predict_survival():
+
+    precipitation = request.args.get("precipitation")
+    tempMax = request.args.get("tempMax")
+    tempMin = request.args.get("tempMin")
     wind = request.args.get("wind")
 
-    arrayTest = [-0.45068983, 0.49293002, 0.80153523, wind ]
-    #prediction = model.predict([[int(experience)]])
+    arrayTest = [precipitation, tempMax, tempMin, wind ]
     prediction = model.predict([arrayTest])
     return "the predicted value is" + str(prediction)
 
