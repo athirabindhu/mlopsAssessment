@@ -19,7 +19,8 @@ def predict_survival():
     tempMin = request.args.get("tempMin")
     wind = request.args.get("wind")
 
-    arrayTest = [precipitation, tempMax, tempMin, wind ]
+    arrayTest = [float(precipitation), float(tempMax), float(tempMin), float(wind) ]
+
     prediction = model.predict([arrayTest])
     return "the predicted value is" + str(prediction)
 
