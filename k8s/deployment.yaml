@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: weatherpredictionv2
+  name: weatherpredictionv1
 spec:
   replicas: 1
   selector:
