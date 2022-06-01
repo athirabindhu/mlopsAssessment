@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: salarypredictionv2
+  name: weatherpredictionv2
 spec:
   replicas: 1
   selector:
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: ml-app
-        image: gcr.io/glowing-space-343410/myapp:v1
+        image: gcr.io/innate-booking-343410/myapp:v1
         ports:
         - containerPort: 8080

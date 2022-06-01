@@ -14,9 +14,8 @@ def welcome():
 @app.route('/predict')
 def predict_survival():
     wind = request.args.get("wind")
-    tempMax = request.args.get("tempMax")
 
-    arrayTest = [-0.45068983, 0.49293002, 0.80153523, wind]
+    arrayTest = [-0.45068983, 0.49293002, 0.80153523, wind ]
     #prediction = model.predict([[int(experience)]])
     prediction = model.predict([arrayTest])
     return "the predicted value is" + str(prediction)
